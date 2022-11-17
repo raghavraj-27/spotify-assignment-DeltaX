@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Songs</title>
+    <style>
+        div {
+            margin: 50px;
+        }
+        form {
+            margin-left: 20px;
+        }
+        #inp {
+            margin-left: 70px;
+        }
+        select {
+            margin-left: 70px;
+        }
+    </style>
+
+</head>
+<body>
+    <a href="/"><h1>Go to Home</h1></a>
+    <h1>Adding a new Song</h1>
+
+    <form action="/home" method="post">
+
+        <div class>
+            <label>Song Name</label>
+            <input type="text" name="artistName" id="inp">
+        </div>
+        <div>
+            <label>Date Released</label>
+            <input type="date" name="dor" id="inp">
+        </div>
+        <div>
+            <label>Artwork</label>
+            <input type="file" name="image" id="inp">
+        </div>
+        <div>
+            <label>Artists</label>
+            <!-- <input type="radio" name="" id="inp"> -->
+            <!-- <label for=""><input type="checkbox" name="" id=""></label> -->
+            <select name="cars" id="cars" multiple>
+                <option value="volvo">Raghu</option>
+                <option value="saab">Saurav</option>
+                <option value="opel">Abhishek</option>
+                <option value="audi">Vinay</option>
+            </select>
+
+            <a href="/add-new-artist">Add New Artist</a>
+              <!-- <input type="checkbox" value="My checkbox label value" /> -->
+        </div>
+        <div>
+            <label>Rating</label>
+            <input type="text" name="image" id="inp">
+        </div>
+        
+        <button type="submit">ADD</button>
+
+    </form>
+</body>
+</html>
+
