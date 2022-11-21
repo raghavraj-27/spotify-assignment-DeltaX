@@ -25,11 +25,11 @@
     <a href="/"><h1>Go to Home</h1></a>
     <h1>Adding a new Song</h1>
 
-    <form action="/home" method="post">
+    <form action="/" method="post">
 
         <div class>
             <label>Song Name</label>
-            <input type="text" name="artistName" id="inp">
+            <input type="text" name="songName" id="inp">
         </div>
         <div>
             <label>Date Released</label>
@@ -43,11 +43,13 @@
             <label>Artists</label>
             <!-- <input type="radio" name="" id="inp"> -->
             <!-- <label for=""><input type="checkbox" name="" id=""></label> -->
-            <select name="cars" id="cars" multiple>
-                <option value="volvo">Raghu</option>
-                <option value="saab">Saurav</option>
-                <option value="opel">Abhishek</option>
-                <option value="audi">Vinay</option>
+            <select name="artistName" id="cars" multiple>
+                <% for(let i=0; i<Math.min(artists.length, 10); i++) {%>
+                    <option value="<%= artists[i].name %>"> <%= artists[i].name %> </option>
+                <!-- <option value="Saurav">Saurav</option>
+                <option value="Abhishek">Abhishek</option>
+                <option value="Vinay">Vinay</option> -->
+                <% } %>
             </select>
 
             <a href="/add-new-artist">Add New Artist</a>
@@ -55,7 +57,7 @@
         </div>
         <div>
             <label>Rating</label>
-            <input type="text" name="image" id="inp">
+            <input type="text" name="rate" id="inp" min="0" max="5">
         </div>
         
         <button type="submit">ADD</button>

@@ -1,7 +1,98 @@
-<h1>Home</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
 
-<a href="/add-new-songs"><button>Add New Song</button></a>
+    <style>
+        body {
+            font-size: 16px;
+        }
+        th {
+            background-color: grey;
+            color: ivory;
+            height: 20px;
+            width: 250px;
+        }
+        tr {
+            padding: 50px;
+            height: 20px;
+        }
+        td {
+            text-align: center;
+            height: 50px;
+            /* margin: ; */
+        }
+        button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border: 1px solid black;
+        }
+        button:hover {
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    
 
-<h2>Top 10 songs</h2>
+    <h1>Home</h1>
 
-<h2>Top 10 artists</h2>
+    <a href="/add-new-songs"><button>Add New Song</button></a>
+
+    <h2>Top 10 songs</h2>
+    <table style="margin: auto;">
+        <tr>
+            <th>Artwork</th>
+            <th>Song</th>
+            <th>Date Of Release</th>
+            <th>Artwork</th>
+            <th>Rate</th>
+        </tr>
+
+        <% for(let i=0; i<songs.length; i++) {%>
+            <tr>
+                <td>__</td>
+                <td> <%= songs[i].name %> </td>
+                <td> <%= songs[i].dateOfRelease %> </td>
+                <td> <%= songs[i].artistName %> </td>
+                <td>
+                    <% for(let j=0; j<songs[i].rate; j++) { %>
+                        &#x2605;
+                    <% } %>
+                </td>
+            </tr>
+        <% } %>
+    </table>
+
+
+    <h2>Top 10 artists</h2>
+    <table style="margin: auto;">
+        <tr>
+            <th>Artist</th>
+            <th>Date Of Birth</th>
+            <th>Songs</th>
+        </tr>
+
+        <% for(let i=0; i<artists.length; i++) {%>
+            <tr>
+                <!-- <td>__</td> -->
+                <td> <%= artists[i].name %> </td>
+                <td> <%= artists[i].dateOfBirth %> </td>
+                <td> <%= artists[i].songsSung %> </td>
+            </tr>
+        <% } %>
+    </table>
+</body>
+</html>
+
