@@ -15,7 +15,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp; `cover: String,`\
 &nbsp;&nbsp;&nbsp;&nbsp; `artistName: {type: [String], sparse: true},`\
 &nbsp;&nbsp;&nbsp;&nbsp; `rate: String`\
-`});`
+`})`
 
 `const artistSchema = new mongoose.Schema({`\
 &nbsp;&nbsp;&nbsp;&nbsp; `name: String,`\
