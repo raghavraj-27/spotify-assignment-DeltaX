@@ -18,9 +18,28 @@
         select {
             margin-left: 70px;
         }
+        button {
+            background-color: #0059ff; /* Green */
+            border: none;
+            color: white;
+            padding: 5px 22px;
+            /* padding: 15px 32px; */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 15px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+        }
     </style>
 </head>
 <body>
+    <a href="/add-new-songs"><h2>Go back</h2></a>
     <h1>Add New Artist</h1>
     <form action="/add-new-songs" method="post">
         <div class>
@@ -33,7 +52,7 @@
         </div>
         <div>
             <label>Bio</label>
-            <textarea name="bio" id="" cols="30" rows="10"></textarea>
+            <textarea name="bio" id="" cols="30" rows="10" id="inp"></textarea>
         </div>
 
         <button type="submit">ADD</button>

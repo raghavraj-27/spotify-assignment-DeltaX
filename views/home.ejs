@@ -35,6 +35,7 @@
             display: inline-block;
             font-size: 16px;
             border: 1px solid black;
+            border-radius: 5px;
         }
         button:hover {
             background-color: white;
@@ -85,14 +86,16 @@
         </tr>
 
         <% for(let i=0; i<artists.length; i++) {%>
-            <tr>
-                <!-- <td>__</td> -->
-                <td> <%= artists[i].name %> </td>
-                <td> <%= artists[i].dateOfBirth %> </td>
-                <td> <%= artists[i].songsSung %> </td>
-            </tr>
+            <% if(artists[i].songsSung.length > 0) { %>
+                <tr>
+                    <!-- <td>__</td> -->
+                    <td> <%= artists[i].name %> </td>
+                    <td> <%= artists[i].dateOfBirth %> </td>
+                    <td> <%= artists[i].songsSung %> </td>
+                </tr>
+            <% } %>
+            
         <% } %>
     </table>
 </body>
 </html>
-
