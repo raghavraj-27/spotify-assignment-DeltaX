@@ -2,7 +2,7 @@
 
 <h3>Tech Stacks Used</h3>
 
- - HTML, CSS : for frontend
+ - HTML, EJS, CSS : for frontend
  - NodeJS : for backend
  - MongoDB : for database
  - Heroku for hosting website
