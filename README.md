@@ -5,7 +5,7 @@
  - HTML, EJS, CSS : for frontend
  - NodeJS : for backend
  - MongoDB : for database
- - Heroku for hosting website
+ - Heroku for hosting website (not working currently, have to use locally)
  - MongoDB Atlas for hosting database
 
 ### Database Schemas
